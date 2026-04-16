@@ -8,7 +8,7 @@ Import the Nyxara AI Studio package into your Unity project.
 
 ## 2. Install Dependencies
 
-Install required external systems:
+Download the optional external systems you want to use:
 
 - LLMUnity (Local LLM)
 - Whisper (Speech-to-Text)
@@ -18,25 +18,37 @@ Install required external systems:
 
 ---
 
-## 3. Open Studio
+## 3. Run Setup Wizard
+
+Open:
+Nyxara AI → Studio → Setup Wizard
+
+Use the wizard to browse to the files or folders you already downloaded.
+
+- Select your `.gguf` file for LLM
+- Select your downloaded Whisper integration folder if you want the wizard to import the Whisper Unity package
+- Select your Whisper model file
+- Optionally select your Piper runtime folder
+- Optionally select your Piper voice `.onnx`
+
+Click install for each dependency or use `Install All`.
+
+The wizard only copies files you manually select. It does not download anything or connect to external services.
+
+---
+
+## 4. Open Studio
 
 Open:
 Nyxara AI → Studio
 
 ---
 
-## 4. Assign External Paths (IMPORTANT)
+## 5. Verify External Paths
 
 Go to the **Status** tab.
 
-In the **Model and Service Paths** section:
-
-- Click **Browse LLM** and select your `.gguf` model
-- Click **Browse Whisper** and select your Whisper model
-
-Optional (for voice output):
-- Click **Browse Piper Exe** and select `piper.exe`
-- Click **Browse Piper Voice** and select a `.onnx` voice file
+The wizard should already update the paths automatically.
 
 Verify status:
 - LLM Model Status → Found
@@ -45,14 +57,14 @@ Verify status:
 
 ---
 
-## 5. Setup Character
+## 6. Setup Character
 
 - Assign your ARKit-compatible character
 - Confirm face renderer is detected
 
 ---
 
-## 6. Build
+## 7. Build
 
 Click:
 
@@ -62,7 +74,7 @@ Build Studio
 
 ---
 
-## 7. Test
+## 8. Test
 
 - Enter Play Mode  
 - Trigger input (mic or test input)  
@@ -73,7 +85,7 @@ If Piper is configured:
 
 ---
 
-## 8. Validate
+## 9. Validate
 
 Use:
 
@@ -89,3 +101,4 @@ Use:
 - Voice output is optional.  
 - If Piper is not configured, Nyxara AI Studio will still work using text-based responses.  
 - If dependencies are not installed, Nyxara AI Studio will still import and run, but AI, speech-to-text, and voice features will remain disabled until configured.
+- Nyxara Setup Wizard does not download or auto-connect to anything outside the Unity project. It only copies files or folders you manually choose.
